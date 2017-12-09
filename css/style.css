@@ -1,0 +1,173 @@
+/*
+Theme Name: Minimal Theme
+Author: Eduardo
+Description: Um tema simples
+Version: 0.0.1
+*/
+@charset 'utf8';
+
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+
+@font-face {
+  font-family: 'icons';
+  src: url('../font/icons.eot?96777782');
+  src: url('../font/icons.eot?96777782#iefix') format('embedded-opentype'),
+       url('../font/icons.woff2?96777782') format('woff2'),
+       url('../font/icons.woff?96777782') format('woff'),
+       url('../font/icons.ttf?96777782') format('truetype'),
+       url('../font/icons.svg?96777782#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  padding: 0 3%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: [menu] 1fr [content] 3fr [sidebar] 1fr;
+  grid-gap: 15px;
+}
+
+nav{
+  height: 100vh;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  text-align:center;
+  font-family: 'arsenal',sans-serif;
+  min-width: 125px;
+}
+nav ul{
+  width: 18.5%;
+  position:fixed;
+  top:25%;
+  border: 1px solid #45ada8;
+  list-style-type: none;
+}
+
+nav ul li a{
+  display: block;
+  padding: 15px;
+  color: #594f4f;
+  text-decoration: none;
+  font-size: 1em;
+}
+nav ul li a:hover{
+  color:#45ada8;
+}
+
+
+.content{
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .post h1{
+  color: #547980;
+  font-size: 2.5em;
+  font-family: 'allerta', sans-serif;
+  text-align: center;
+}
+
+.post{
+	min-width: 100%;
+	margin-top: 10px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #CCC;
+}
+
+hr.separator{
+  max-width: 15%;
+  margin:5px  auto;
+}
+
+.post-date, .comments{
+  text-align:center;
+  font-family: 'arsenal', sans-serif;
+  font-size: .8em;
+  color: #333333;
+}
+.date, .comments{
+  color:#45ada8;
+}
+
+.main-content{
+  font-size: .9em;
+  color: #333333;
+  line-height: 1.7em;
+  text-align: justify;
+  margin: 20px auto;
+}
+.search-box{
+	grid-column-start: 3;
+	grid-column-end: 3;
+	/**/
+  color :#594f4f;
+	font-family: 'arsenal', open-sans;
+}
+
+.search-box input{
+  font-family: 'arsenal', open-sans;
+  color: #594f4f;
+  width: 85%;
+  margin: 5px 0;
+  padding: 0 5px;
+  border: 1px solid #45ada8;
+  border-radius: 5%;
+}
+
+input:focus{
+  border:2px solid #45ada8;
+}
+.search-icon:after{
+	font-family: 'icons';
+	content: '\e800';
+}
+.search-box div{
+  position: fixed;
+  top:25%;
+  height: auto;
+  max-width: 18%;
+  padding: 5px;
+  border: 1px solid #45ada8;
+}
+.share{
+  margin-top: 15px;
+  text-align: center;
+}
+.share-whatsapp{
+  background-image: url(../img/whatsapp-logo.png);
+}
+.share-facebook{
+    background-image: url(../img/facebook-logo.png);
+}
+.share-facebook, .share-whatsapp{
+  display: inline-block;
+  width:32px;
+  height: 32px;
+  background-size: 32px 32px;
+}
+
+footer{
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	padding: 40px;
+}
+
+footer p{
+  font-size: 1em;
+  color: #594f4f;
+	text-align:center;
+	font-family: 'arsenal', sans-serif;
+}
+
